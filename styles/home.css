@@ -1,0 +1,35 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.nav-bar{
+    z-index: 1;
+}
+
+/* The background image takes full space */
+.hero-img {
+  opacity: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers entire area */
+  z-index: -1; /* Put it behind */
+}
+
+/* Card on top of background */
+.hero-card {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+}

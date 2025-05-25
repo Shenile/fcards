@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/global.css">
+  </head>
+  <body class="center-div">
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">login</button>
+    </form>
+
+     <img src="/assets/doodles_background.jpg" alt="" class="hero-img" />
+
+    <script type="module">
+      import { login } from "/scripts/auth.js";
+
+      document.getElementById("login-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userData = login();
+
+        if (userData) {
+          window.location.href = "/pages/home.html";
+        }
+      });
+    </script>
+  </body>
+</html>

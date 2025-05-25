@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Barrio&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("/styles/navbar.css");
+@import url("/styles/collections.css");
+@import url("/styles/home.css");
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+/* body {
+  margin: 0;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 16px;
+  line-height: 1.8;
+} */
+
+* {
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0px;
+  padding: 0px;
+}
+
+.shadow-box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* x-offset y-offset blur color */
+}
+
+input,
+button[type="submit"] {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+button[type="submit"]{
+    /* background-color: #967bdf; */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  gap: 20px;
+  /* width: 300px; */
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* nav bar alignment */
+#nav-bar {
+  padding: 15px 15%;
+  padding-top: 15px;
+
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

@@ -1,0 +1,148 @@
+#search-collections {
+  width: inherit;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: medium;
+}
+
+#search-collections:focus {
+  border: 1px solid blue;
+}
+
+.cards-main-cont {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15%;
+  padding-top: 40px;
+  gap: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 10px 0px;
+}
+
+.card-div {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.card-count {
+  font-size: small;
+}
+
+.no-collection-cont {
+  width: inherit;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-collection {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.collection-header-bar, .cards-view-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-collection-btn {
+  padding: 5px 10px;
+  background-color: none;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.custom-carousel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.custom-card{
+  width: 600px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.carousel-btn{
+  padding: 17px 20px;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#add-new-card-btn{
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.card-content {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide state */
+.card-content.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* or 100% if you want a full slide */
+}
+
+.card-actions-btn-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-actions-btn-div button{
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.card-header-title-div{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.card-header-title-div button{
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5px 10px;
+}
+
+.card-header-title-div button:hover{
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+*p{
+  padding: 0px;
+  margin: 0px;
+}
+
