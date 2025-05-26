@@ -36,7 +36,7 @@ export function login() {
 
 export function logOut(){
   localStorage.removeItem("currentUser");
-  window.location.href = "/pages/home.html";
+  window.location.href = "/index.html";
   reRenderNav();
 }
 

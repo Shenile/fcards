@@ -54,7 +54,7 @@ export function getCollection(id) {
   const collections = getUserCollections();
   console.log(collections);
   console.log(
-    collections.find((c) => c.id == id && c.email == getCurrentUser()?.email)
+    collections.find((c) => c.id == id && c.userId == getCurrentUser()?.email)
   );
   if (!collections) return null;
 
@@ -100,6 +100,7 @@ export function addCardToCollection(collectionId, question, answer) {
 
   collection.cards.push(newCard);
   saveUserCollections(collections);
+  console.log(collection)
   return newCard;
 }
 // update card

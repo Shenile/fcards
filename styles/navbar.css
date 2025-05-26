@@ -25,18 +25,28 @@
 .nav-link {
   text-decoration: none;
   font-weight: 500;
+  
   /* color: white; */
 }
+
+
 
 .auth-btn {
   border: none;
   background-color: transparent;
   font-size: medium;
   font-weight: 500;
+  padding: 5px 10px;
   /* color: white; */
 }
 
-.nav-link:hover, .active-link {
+.auth-btn:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+
+.active-link {
     color: #0d6efd;
 }
 

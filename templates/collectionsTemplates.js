@@ -6,7 +6,7 @@ export const cardsMainDivCollectionHeader = `
         <h5 style="
         padding-top: 10px;
         " class="">Collections</h5>
-        <button type="button" class="new-collection-btn btn btn-primary">New Collection</button>
+        <button type="button" class="new-collection-btn btn btn-primary">New</button>
       </div>
 `
 

@@ -4,16 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
   </head>
   <body class="center-div">
     <form id="login-form">
+      <h1 class="logo" style="text-align: center">FCards</h1>
       <input type="email" id="email" placeholder="Email" required />
       <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">login</button>
+      <button type="submit" class="btn btn-primary">login</button>
     </form>
-
-     <img src="/assets/doodles_background.jpg" alt="" class="hero-img" />
 
     <script type="module">
       import { login } from "/scripts/auth.js";
@@ -23,7 +36,7 @@
         const userData = login();
 
         if (userData) {
-          window.location.href = "/pages/home.html";
+          window.location.href = "/index.html";
         }
       });
     </script>

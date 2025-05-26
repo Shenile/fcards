@@ -11,18 +11,58 @@
 }
 
 .cards-main-cont {
+  
   display: flex;
   flex-direction: column;
-  padding: 20px 15%;
-  padding-top: 40px;
-  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .cards-main-cont {
+    margin: 20px 10%;
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-main-cont {
+    margin: 20px 15%;
+    padding: 40px;
+  }
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
   padding: 10px 0px;
+}
+
+@media screen and (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+.collection-card{
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.collection-card:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
 }
 
 .card-div {
@@ -36,7 +76,8 @@
 }
 
 .no-collection-cont {
-  width: inherit;
+  margin-top: 20px;
+  width: 100%;
   height: 300px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -50,7 +91,8 @@
   cursor: pointer;
 }
 
-.collection-header-bar, .cards-view-header {
+.collection-header-bar,
+.cards-view-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -65,7 +107,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.custom-carousel{
+.custom-carousel {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -74,7 +116,7 @@
   margin-top: 20px;
 }
 
-.custom-card{
+.custom-card {
   width: 600px;
   height: 300px;
   display: flex;
@@ -84,13 +126,13 @@
   border-radius: 10px;
 }
 
-.carousel-btn{
+.carousel-btn {
   padding: 17px 20px;
   border-radius: 100%;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-#add-new-card-btn{
+#add-new-card-btn {
   padding: 5px 10px;
   border-radius: 10px;
 }
@@ -107,7 +149,7 @@
   transform: translateY(20px); /* or 100% if you want a full slide */
 }
 
-.card-actions-btn-div{
+.card-actions-btn-div {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -116,33 +158,32 @@
   margin-top: 20px;
 }
 
-.card-actions-btn-div button{
+.card-actions-btn-div button {
   width: 100px;
   padding: 5px;
   border-radius: 10px;
 }
 
-.card-header-title-div{
+.card-header-title-div {
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.card-header-title-div button{
+.card-header-title-div button {
   border: none;
   outline: none;
   background-color: white;
   padding: 5px 10px;
 }
 
-.card-header-title-div button:hover{
+.card-header-title-div button:hover {
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-*p{
+*p {
   padding: 0px;
   margin: 0px;
 }
-

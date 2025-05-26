@@ -8,8 +8,15 @@ export function createNavbar() {
       url: "/pages/collections.html",
       is_active: false,
       private_route: true,
-    },
+    }
   ];
+
+  const isLoggedIn = localStorage.getItem("currentUser");
+
+  // Filter private routes if user not logged in
+  if (!isLoggedIn) {
+    navLinks = navLinks.filter((route) => !route.private_route);
+  }
 
   // main nav container
   const nav = document.createElement("nav");
@@ -20,18 +27,13 @@ export function createNavbar() {
   logo.textContent = "FCards";
   logo.classList.add("logo");
   logo.addEventListener("click", () => {
-    window.location.href = "/pages/home.html";
+    window.location.href = "/index.html";
   });
   nav.appendChild(logo);
 
   // section for links/buttons
   const secDiv = document.createElement("div");
   secDiv.classList.add("sec-div");
-
-  // filter out routes depending on the current user
-  if (!localStorage.getItem("currentUser")) {
-    navLinks = navLinks.filter((route) => !route.private_route);
-  }
 
   // nav links
   navLinks.forEach((navLink) => {
@@ -42,11 +44,9 @@ export function createNavbar() {
     }
     link.textContent = navLink.name;
     link.href = navLink.url;
-    if (navLink.private_route) secDiv.appendChild(link);
+    secDiv.appendChild(link);
+    // if (navLink.private_route) secDiv.appendChild(link);
   });
-
-  // check if user is logged in
-  const isLoggedIn = localStorage.getItem("currentUser");
 
   if (isLoggedIn) {
     const logOutBtn = createBtn("Log out", "auth-btn", logOut);

@@ -23,6 +23,7 @@
   height: 100%;
   object-fit: cover; /* Ensures the image covers entire area */
   z-index: -1; /* Put it behind */
+  background-repeat: repeat;
 }
 
 /* Card on top of background */
@@ -32,4 +33,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1; 
+
 }
